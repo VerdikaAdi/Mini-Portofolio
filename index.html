@@ -1,19 +1,65 @@
 <!DOCTYPE html>
+<!--
+  HTML5 DOCUMENT DECLARATION
+  Sumber: MDN Web Docs - <!DOCTYPE html>
+  Fungsi: Mendeklarasikan bahwa dokumen menggunakan standar HTML5
+  sehingga browser dapat merender halaman dengan benar.
+-->
+<!--
+  ROOT HTML ELEMENT
+  Sumber: MDN Web Docs - <html>
+  Fungsi: Elemen utama yang membungkus seluruh isi halaman web.
+  Atribut lang="en" menunjukkan bahasa utama halaman adalah Bahasa Inggris.
+-->
 <html lang="en">
+  
+   <!--
+    PAGE METADATA
+    Sumber: MDN Web Docs - <head>
+    Fungsi: Berisi informasi halaman yang tidak ditampilkan langsung
+    kepada pengguna, seperti metadata, judul halaman, stylesheet,
+    dan favicon.
+  -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Personal portfolio — projects, skills, and contact.">
   <title>Your Name | Portfolio</title>
+
+  <!--
+    EXTERNAL STYLESHEET
+    Sumber: MDN Web Docs - <link>
+    Fungsi: Menghubungkan file CSS eksternal yang digunakan
+    untuk mengatur tampilan website.
+  -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="svg+xml">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+<!--
+  HEADER WEBSITE
+  Sumber: MDN Web Docs - <header>
+  Fungsi: Menampilkan bagian kepala halaman yang berisi identitas website
+  dan navigasi utama yang digunakan pengguna untuk berpindah antar section.
+-->
   <header class="site-header">
+   <!--
+  NAVIGATION MENU
+  Sumber: MDN Web Docs - <nav>
+  Fungsi: Menyediakan kumpulan tautan navigasi untuk mengakses bagian
+  About, Projects, Skills, dan Contact dalam halaman portfolio.
+-->
     <nav class="nav" aria-label="Main navigation">
       <a class="logo" href="#">Your Name</a>
+   <!--
+      GONG
+  HAMBURGER MENU BUTTON
+  Sumber: MDN Web Docs - <button>
+  Fungsi: Tombol navigasi responsif yang digunakan pada perangkat mobile
+  untuk menampilkan atau menyembunyikan menu navigasi.
+-->
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -27,8 +73,14 @@
       </ul>
     </nav>
   </header>
-// GONG tombol navigasi
+
   <main id="main">
+    <!--
+  HERO SECTION
+  Sumber: MDN Web Docs - <section>
+  Fungsi: Menampilkan informasi utama yang pertama kali dilihat pengunjung,
+  seperti nama, profesi, dan perkenalan singkat pemilik portfolio.
+-->
     <section class="hero" id="home">
       <p class="hero-label">Hello, I'm</p>
       <h1>Your Name</h1>
@@ -41,7 +93,13 @@
         <a class="btn btn-secondary" href="#contact">Get in touch</a>
       </div>
     </section>
-#GONG 
+
+    <!--
+  ABOUT SECTION
+  Sumber: MDN Web Docs - Semantic HTML (<section>, <aside>)
+  Fungsi: Menampilkan informasi mengenai latar belakang, minat,
+  pendidikan, dan profil singkat pemilik portfolio.
+-->
     <section class="section" id="about">
       <div class="container">
         <h2>About</h2>
@@ -90,6 +148,12 @@
             </div>
           </article>
 
+    <!--
+  PROJECT CARD
+  Sumber: MDN Web Docs - <article>
+  Fungsi: Merepresentasikan proyek secara mandiri yang berisi
+  judul proyek, deskripsi, teknologi yang digunakan, serta tautan demo.
+-->
           <article class="project-card">
             <div class="project-card-body">
               <h3>Project Two</h3>
@@ -123,6 +187,12 @@
       </div>
     </section>
 
+  <!--
+  SKILLS SECTION
+  Sumber: MDN Web Docs - <section>
+  Fungsi: Menampilkan daftar kemampuan, bahasa pemrograman,
+  tools, dan bidang yang dikuasai oleh pemilik portfolio.
+-->
     <section class="section" id="skills">
       <div class="container">
         <h2>Skills</h2>
@@ -155,6 +225,12 @@
       </div>
     </section>
 
+  <!--
+  CONTACT SECTION
+  Sumber: MDN Web Docs - Hyperlinks (<a>)
+  Fungsi: Menyediakan informasi kontak yang dapat digunakan
+  pengunjung untuk menghubungi pemilik portfolio.
+-->
     <section class="section section-alt" id="contact">
       <div class="container">
         <h2>Contact</h2>
@@ -176,13 +252,25 @@
       </div>
     </section>
   </main>
-
+  
+<!--
+  FOOTER WEBSITE
+  Sumber: MDN Web Docs - <footer>
+  Fungsi: Menampilkan informasi hak cipta dan informasi tambahan
+  yang berada di bagian paling bawah halaman website.
+-->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; <span id="year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
-
+  
+<!--
+  EXTERNAL JAVASCRIPT FILE
+  Sumber: MDN Web Docs - <script>
+  Fungsi: Menghubungkan file JavaScript eksternal yang digunakan
+  untuk menangani interaksi dan perilaku dinamis pada halaman web.
+-->
   <script src="main.js"></script>
 </body>
 </html>
