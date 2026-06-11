@@ -1,4 +1,11 @@
 /* --- Variables --- */
+/*
+  CSS CUSTOM PROPERTIES (VARIABLES)
+  Sumber: MDN Web Docs - CSS Custom Properties (--variable)
+  Fungsi: Menyimpan nilai warna, ukuran, font, dan properti lainnya
+  agar dapat digunakan kembali di seluruh stylesheet sehingga lebih
+  mudah dikelola dan dimodifikasi.
+*/
 :root {
   --bg: #0f1419;
   --bg-alt: #1a2332;
@@ -16,16 +23,34 @@
 }
 
 /* --- Reset & base --- */
+/*
+  CSS RESET DAN BASE STYLES
+  Sumber: MDN Web Docs - box-sizing Property
+  Fungsi: Menyeragamkan perilaku elemen HTML pada berbagai browser
+  dan menetapkan gaya dasar untuk seluruh halaman website.
+*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/*
+  SMOOTH SCROLLING
+  Sumber: MDN Web Docs - scroll-behavior
+  Fungsi: Membuat perpindahan halaman menjadi lebih halus ketika
+  pengguna menekan link navigasi yang mengarah ke section tertentu.
+*/
 html {
   scroll-behavior: smooth;
 }
 
+/*
+  BODY STYLING
+  Sumber: MDN Web Docs - CSS Layout Fundamentals
+  Fungsi: Mengatur tampilan utama halaman seperti warna latar,
+  warna teks, ukuran font, dan jenis font yang digunakan.
+*/
 body {
   margin: 0;
   font-family: var(--font);
@@ -70,11 +95,23 @@ p {
 }
 
 /* --- Utilities --- */
+/*
+  UTILITY CLASS - CONTAINER
+  Sumber: MDN Web Docs - CSS Width Property
+  Fungsi: Membatasi lebar maksimum konten dan menjaga posisi
+  konten tetap berada di tengah halaman.
+*/
 .container {
   width: min(100% - 2rem, var(--max-width));
   margin-inline: auto;
 }
 
+/*
+  ACCESSIBILITY SKIP LINK
+  Sumber: MDN Web Docs - Accessibility Guidelines
+  Fungsi: Memungkinkan pengguna keyboard langsung menuju
+  konten utama tanpa harus melewati menu navigasi.
+*/
 .skip-link {
   position: absolute;
   top: -100%;
@@ -105,6 +142,12 @@ p {
 }
 
 /* --- Header & nav --- */
+/*
+  HEADER DAN NAVIGATION
+  Sumber: MDN Web Docs - CSS Position Sticky
+  Fungsi: Membuat header tetap terlihat di bagian atas layar
+  ketika pengguna melakukan scrolling halaman.
+*/
 .site-header {
   position: sticky;
   top: 0;
@@ -115,6 +158,12 @@ p {
   border-bottom: 1px solid var(--border);
 }
 
+/*
+  NAVIGATION MENU
+  Sumber: MDN Web Docs - CSS Flexbox
+  Fungsi: Mengatur tata letak menu navigasi agar tersusun
+  secara horizontal dan responsif.
+*/
 .nav {
   display: flex;
   align-items: center;
@@ -148,6 +197,12 @@ p {
   color: var(--text);
 }
 
+/*
+  HAMBURGER MENU BUTTON
+  Sumber: MDN Web Docs - CSS Flexbox
+  Fungsi: Menampilkan tombol navigasi pada perangkat mobile
+  yang digunakan untuk membuka dan menutup menu.
+*/
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -167,6 +222,12 @@ p {
 }
 
 /* --- Hero --- */
+/*
+  HERO SECTION
+  Sumber: MDN Web Docs - CSS Flexbox Layout
+  Fungsi: Mengatur tampilan section utama agar konten berada
+  di tengah layar dan menjadi fokus utama pengunjung.
+*/
 .hero {
   min-height: calc(100vh - var(--header-height));
   display: flex;
@@ -210,6 +271,12 @@ p {
   margin-top: 2rem;
 }
 
+/*
+  BUTTON COMPONENTS
+  Sumber: MDN Web Docs - CSS Transitions
+  Fungsi: Memberikan tampilan dan efek interaktif pada tombol
+  saat pengguna mengarahkan kursor ke tombol.
+*/
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -244,6 +311,12 @@ p {
 }
 
 /* --- About --- */
+/*
+  ABOUT SECTION LAYOUT
+  Sumber: MDN Web Docs - CSS Grid Layout
+  Fungsi: Mengatur tata letak informasi profil dan kartu
+  informasi singkat menggunakan grid responsif.
+*/
 .about-grid {
   display: grid;
   gap: 2rem;
@@ -297,6 +370,12 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
+/*
+  PROJECT CARD COMPONENT
+  Sumber: MDN Web Docs - CSS Grid & Flexbox
+  Fungsi: Menampilkan proyek dalam bentuk kartu yang memiliki
+  efek hover dan tata letak yang responsif.
+*/
 .project-card {
   display: flex;
   flex-direction: column;
@@ -350,6 +429,12 @@ p {
 }
 
 /* --- Skills --- */
+/*
+  SKILLS SECTION
+  Sumber: MDN Web Docs - CSS Grid Layout
+  Fungsi: Menampilkan daftar kemampuan dalam beberapa kolom
+  yang otomatis menyesuaikan ukuran layar.
+*/
 .skills-grid {
   display: grid;
   gap: 1.5rem;
@@ -380,6 +465,12 @@ p {
 }
 
 /* --- Contact --- */
+/*
+  CONTACT SECTION
+  Sumber: MDN Web Docs - CSS Grid Layout
+  Fungsi: Menata informasi kontak dalam bentuk daftar yang
+  mudah dibaca dan diakses pengguna.
+*/
 .contact-list {
   display: grid;
   gap: 1rem;
@@ -404,6 +495,12 @@ p {
 }
 
 /* --- Footer --- */
+/*
+  FOOTER STYLING
+  Sumber: MDN Web Docs - CSS Border Property
+  Fungsi: Memberikan tampilan bagian footer sebagai penutup
+  halaman serta menampilkan informasi hak cipta.
+*/
 .site-footer {
   padding: 2rem 0;
   border-top: 1px solid var(--border);
@@ -417,6 +514,12 @@ p {
 }
 
 /* --- Mobile nav --- */
+/*
+  RESPONSIVE MOBILE NAVIGATION
+  Sumber: MDN Web Docs - CSS Media Queries
+  Fungsi: Menyesuaikan tampilan navigasi ketika website
+  diakses menggunakan perangkat dengan layar kecil.
+*/
 @media (max-width: 640px) {
   .nav-toggle {
     display: flex;
